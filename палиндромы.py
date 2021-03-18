@@ -4,9 +4,8 @@ def ispal(text):
 
 def main():
     text = input()
-    pals = [""]
+    pals = []
     lvl = 2
-    result = ""
 
     while lvl<len(text):
         ch = 0
@@ -18,9 +17,7 @@ def main():
             break
         lvl += 1
 
-    for pal in pals:
-        if pal>result:
-            result = pal
-    print(result)
+
+    print(max(pals))
 
 main()
