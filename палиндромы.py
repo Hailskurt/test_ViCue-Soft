@@ -16,8 +16,6 @@ def main():
         if pals != []:
             break
         lvl += 1
-
-
     print(max(pals))
 
 main()
