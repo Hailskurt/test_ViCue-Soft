@@ -5,7 +5,8 @@ rotation = 1
 x = 0
 y = 0
 
-
+#заносит число в ячейку относительно текущей (x; y) 
+#следующая ячейка определяется в зависимости от направления rotation
 def step():
     global x
     global y
@@ -40,6 +41,8 @@ def step():
         tab[y-1][x] = num
         y -= 1
 
+
+#подготовка таблицы
 for i in range(n):
     tab.append([])
     for j in range(n):
@@ -47,6 +50,7 @@ for i in range(n):
 tab[0][0] = 1
 
 
+#основной цикл с проверкой не выходит ли за край
 while num <= n**2:
     try:
         step()            
